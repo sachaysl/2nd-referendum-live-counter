@@ -29,10 +29,11 @@ function draw() {
 
 function totalSignatures(secondRefData) {
     latestNumber = secondRefData.data.attributes.signature_count;
-    sig_counts.push(latestNumber);
-    //change hack below later
-    if (sig_counts.length > 2000000) {
-	sig_counts.length = 0;
+    sig_counts.push(+latestNumber);
+    
+    console.log(sig_counts.length);
+    if (sig_counts.length > 2) {
+	sig_counts.shift();
     }
     length = sig_counts.length;
     console.log(sig_counts);
