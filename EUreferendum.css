@@ -54,6 +54,10 @@ a {
     #title {
     font-size: 0.7rem;
     }
+
+    a {
+    font-size: 1.0rem;
+    }
 }
 
 @media only screen and (max-width: 400px) {
@@ -63,6 +67,10 @@ a {
     #title {
 	font-size: 0.6rem;
     }
+    a {
+    font-size: 0.8rem;
+    }
+
 }
 
 
