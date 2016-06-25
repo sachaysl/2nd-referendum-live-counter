@@ -18,8 +18,8 @@ function setup() {
     d3.select("#signaturesNumber").text(d3.format(',')(latestNumber));
     d3.select("#signaturesPerMinNumber").text("calculating...");
     d3.select("#signaturesPerHourNumber").text("calculating...");
-
     console.log(sig_counts);
+    animateValue("signaturesNumber", latestNumber , latestNumber + 300, 10000);
     frameRate(0.1);
 }
 
@@ -40,12 +40,29 @@ function totalSignatures(secondRefData) {
     sigs_per_hour = d3.format(',') (sigs_per_min * 60);
     console.log(sigs_per_min);
     console.log(sigs_per_hour);
-    
-	
-    d3.select("#signaturesNumber").text(d3.format(',')(latestNumber));
+
+    animateValue("signaturesNumber", sig_counts[length-2] , sig_counts[length-1], 10000);
+    //d3.select("#signaturesNumber").text(d3.format(',')(latestNumber));
     d3.select("#signaturesPerMinNumber").text(sigs_per_min);
-    d3.select("#signaturesPerHourNumber").text(sigs_per_hour);
-    
+    d3.select("#signaturesPerHourNumber").text(sigs_per_hour);    
 }
+
+function animateValue(id, start, end, duration) {
+    var range = end - start;
+    var current = start;
+    var increment = end > start? 1 : -1;
+    var stepTime = Math.abs(Math.floor(duration / range));
+    var obj = document.getElementById(id);
+    var timer = setInterval(function() {
+	current += increment;
+	obj.innerHTML = d3.format(',')(current);
+	if (current == end) {
+	    clearInterval(timer);
+	}
+    }, stepTime);
+}
+
+
+
 
 
