@@ -1,12 +1,24 @@
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', 'Helvetica';
-    margin-left: 2rem;
     margin-top: 1rem;
     font-weight: 200;
+    font-size: 24px;
+}
+
+#container {
+    position: absolute;
+    width: 30rem;
+    height: 200px;
+    z-index: 15;
+    top: 50%;
+    left: 50%;
+    margin: -15rem 0 0 -250px;
+    text-align: center;
 }
 
 .data {
-    padding-bottom: 0.5rem;
+    padding-bottom: 1rem;
+    font-weight: 100;
 }
 
 .number {
@@ -21,10 +33,15 @@ body {
 
 #title {
     font-family: 'Gill Sans', 'Gill Sans MT';
-    margin-bottom: 1rem;
-    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
 }
 
 a {
- 
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+#shareContainer {
+    margin-bottom: 0.5rem;
 }
