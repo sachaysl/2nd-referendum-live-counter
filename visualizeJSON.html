@@ -8,10 +8,17 @@
   <!--<script language="javascript" src="libraries/p5.sound.js"></script>-->
   <script language="javascript" type="text/javascript" src="visualizeJSON.js"></script>
   <!-- this line removes any default padding and style. you might only need one of these values set. -->
-  <style> body {padding: 0; margin: 0;} </style>
+   <link rel="stylesheet" type="text/css" href="EUreferendum.css" </link>
 </head>
 <body>
-  <div id="signatures">Total Signatures For Second EU Referendum: </div>
-  <div id="signaturesPerMin">Signatures Per Min: </div>
+  <div id="signatures" class="data">Total Signatures For Second EU Referendum:
+    <span id="signaturesNumber"> </span>
+  </div>
+  <div id="signaturesPerMin" class="data">Signatures Per Minute:
+    <span id="signaturesPerMinNumber"> </span>
+  </div>
+  <div id="signaturesPerHour" class="data">Signatures Per Hour:
+    <span id="signaturesPerHourNumber"> </span>
+  </div>
 </body>
 </html>
