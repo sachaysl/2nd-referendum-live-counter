@@ -1,5 +1,7 @@
 body {
     font-family: Helvetica;
+    margin-left: 2rem;
+    margin-top: 4rem;
 }
 
 .data {
@@ -8,4 +10,8 @@ body {
 
 .number {
     color: green;
+}
+
+a {
+ 
 }
