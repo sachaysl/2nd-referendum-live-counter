@@ -16,8 +16,8 @@ function setup() {
     console.log(latestNumber);
 
     d3.select("#signaturesNumber").text(d3.format(',')(latestNumber));
-    d3.select("#signaturesPerMinNumber").text(calculating...);
-    d3.select("#signaturesPerHourNumber").text(calculating...);
+    d3.select("#signaturesPerMinNumber").text("calculating...");
+    d3.select("#signaturesPerHourNumber").text("calculating...");
 
     console.log(sig_counts);
     frameRate(0.1);

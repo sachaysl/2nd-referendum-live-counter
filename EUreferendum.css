@@ -4,5 +4,8 @@ body {
 
 .data {
     padding-bottom: 0.5rem;
+}
 
+.number {
+    color: green;
 }
