@@ -46,10 +46,10 @@ a {
     margin-bottom: 0.5rem;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 1800px) {
     body {
-	transform: scale(1.1);
-	transform-origin: 50% 50%;
+	transform: scale(1.3);
+	transform-origin: 30% 30%;
     }
 }
     
