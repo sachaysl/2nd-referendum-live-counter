@@ -49,11 +49,16 @@ function totalSignatures(secondRefData) {
 }
 
 function animateValue(id, start, end, duration) {
+    var obj = document.getElementById(id);
     var range = end - start;
+    if (range == 0) {
+	obj.innerHTML = start;
+    }
+    else {
+	
     var current = start;
     var increment = end > start? 1 : -1;
     var stepTime = Math.abs(Math.floor(duration / range));
-    var obj = document.getElementById(id);
     var timer = setInterval(function() {
 	current += increment;
 	obj.innerHTML = d3.format(',')(current);
@@ -61,6 +66,7 @@ function animateValue(id, start, end, duration) {
 	    clearInterval(timer);
 	}
     }, stepTime);
+    }
 }
 
 

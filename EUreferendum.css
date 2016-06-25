@@ -1,7 +1,8 @@
 body {
-    font-family: Helvetica;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Helvetica';
     margin-left: 2rem;
-    margin-top: 4rem;
+    margin-top: 1rem;
+    font-weight: 200;
 }
 
 .data {
@@ -15,6 +16,13 @@ body {
 .fb-share-button {
     margin-bottom: 1rem;
     margin-top: -2rem;
+    margin-right: 1rem;
+}
+
+#title {
+    font-family: 'Gill Sans', 'Gill Sans MT';
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
 }
 
 a {
