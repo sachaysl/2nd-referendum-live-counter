@@ -19,7 +19,7 @@ function setup() {
     d3.select("#signaturesPerMinNumber").text("calculating...");
     d3.select("#signaturesPerHourNumber").text("calculating...");
     console.log(sig_counts);
-    animateValue("signaturesNumber", latestNumber , latestNumber + 300, 10000);
+    animateValue("signaturesNumber", latestNumber , latestNumber + 30, 10000);
     frameRate(0.1);
 }
 
