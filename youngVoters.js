@@ -222,7 +222,7 @@ function youngVoters() {
 	.style('font-size', '1rem')
 	.style('font-family', 'Gill Sans');
 
-    d3.select("#youngVotersNoVote").transition().delay(8000).duration(1000)
+    d3.select("#youngVotersNoVote").transition().delay(6000).duration(1000)
 	.style("visibility", "inherit");
 
 //    d3.selectAll(".thirdRow").transition().delay(15000).duration(1000)
