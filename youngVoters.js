@@ -3,7 +3,7 @@ function youngVoters() {
     var svg = d3.select("#sketch").attr("width", 1200).attr("height", 800).append('g');
     var votes = svg.append('g').attr('id', '#votes');
 
-    svg.attr('transform', 'translate(60,-60)');
+    svg.attr('transform', 'translate(0,-60)');
     
     svg.append('text')
 	.attr('x',90)
@@ -48,15 +48,37 @@ function youngVoters() {
 		.attr('x', 85 + (32*25))
 		.attr('y', 60)
 		.attr('width', 32)
-		.attr('height', 54)
+		.attr('height', 50)
 		.attr('xlink:href', 'resources/halfManGreen.jpg');
-	}   
-
-	d3.select("#remain" + i).transition().delay(1000 + i*100).duration(1000)
+	}
+	    d3.select("#remain" + i).transition().delay(1000 + i*100).duration(1000)
 	    .style('visibility', 'inherit');
-
     }
 
+    for (var i = 0; i<10; i++) {
+	if (i < 9) {
+	    votes.append('svg:image')
+		.attr('id', 'remain' + (33 + i))
+		.style('visibility', 'hidden')
+		.attr('x', 90 + 32*25 + (i * 25))
+		.attr('y', 60)
+		.attr('width', 30)
+		.attr('height', 50)
+		.attr('xlink:href','resources/fullManGreen.jpg');
+	}
+
+	else {
+	    votes.append('svg:image')
+		.attr('id', 'remain' + 32)
+		.style('visibility', 'hidden')
+		.attr('x', 85 + (41*25))
+		.attr('y', 57)
+		.attr('width', 32)
+		.attr('height', 54)
+		.attr('xlink:href', 'resources/halfManGreen.jpg');
+	}
+	
+    }
 
     //add leave votes
     for (var i=0; i< 36; i++) {
