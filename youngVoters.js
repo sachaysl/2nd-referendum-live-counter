@@ -3,10 +3,10 @@ function youngVoters() {
     var svg = d3.select("#sketch").attr("width", 1200).attr("height", 800).append('g');
     var votes = svg.append('g').attr('id', '#votes');
 
-    svg.attr('transform', 'translate(60,0)');
+    svg.attr('transform', 'translate(60,-60)');
     
     svg.append('text')
-	.attr('x',100)
+	.attr('x',90)
 	.attr('y',20)
 	.text('Brexit Referendum Results')
 	.style('font-size', '1.5rem')
@@ -55,7 +55,7 @@ function youngVoters() {
     }
 
     svg.append('text')
-	.attr('x',100)
+	.attr('x',90)
 	.attr('y',360)
 	.text("18-24 Year Olds Who Didn't Vote")
 	.style('font-size', '1.3rem')
