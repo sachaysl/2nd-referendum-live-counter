@@ -1,3 +1,5 @@
+//To Do: message in center of screen when width < 500 telling viewer to rotate screen and refresh
+
 //text
 //According to Sky data, only 36% of 18-24 year olds bothered to vote
 
