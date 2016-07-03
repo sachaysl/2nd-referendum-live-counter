@@ -7,8 +7,20 @@
 //In fact, we would have only needed x% of young voters to have turned up
 //to have changed the result
 
+window.onresize = function (event) {
+    applyOrientation();
+}
+
+function applyOrientation() {
+    if (window.innerHeight > window.innerWidth) {
+	alert("Please rotate your phone to view this visualization");
+    } else {
+	youngVoters();
+    }
+}
+
 function youngVoters() {
-    
+
     var svg = d3.select("#sketch").attr("width", 1200).attr("height", 800).append('g');
     var votes = svg.append('g').attr('id', '#votes');
     var base = 4500;
