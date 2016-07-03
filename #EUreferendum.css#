@@ -1,0 +1,79 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Helvetica';
+    font-weight: 200;
+    font-size: 20px;
+}
+
+#container {
+    position: absolute;
+    width: 40rem;
+    height: 20rem;
+    z-index: 15;
+    top: 50%;
+    left: 50%;
+    margin: -10rem 0 0 -21rem;
+    text-align: center;
+}
+
+.data {
+    padding-bottom: 1rem;
+    font-weight: 100;
+}
+
+.number {
+    color: green;
+}
+
+.fb-share-button {
+    margin-bottom: 1rem;
+    margin-top: -2rem;
+    margin-right: 1rem;
+}
+
+#title {
+    font-family: 'Gill Sans', 'Gill Sans MT';
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+a {
+    padding-top: 2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+
+}
+
+#shareContainer {
+    margin-bottom: 0.5rem;
+}
+
+@media only screen and (max-width: 400px) {
+    body {
+	font-size: 15px;
+    }
+    #title {
+    font-size: 0.7rem;
+    }
+
+    a {
+    font-size: 1.0rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    body {
+	font-size: 12px;
+    }
+    #title {
+	font-size: 0.6rem;
+    }
+    a {
+    font-size: 0.8rem;
+    }
+
+}
+
+
+
+
+    
