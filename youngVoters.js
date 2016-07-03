@@ -8,10 +8,10 @@
 //to have changed the result
 
 function youngVoters() {
-
+    
     var svg = d3.select("#sketch").attr("width", 1200).attr("height", 800).append('g');
     var votes = svg.append('g').attr('id', '#votes');
-
+    var base = 4500;
     svg.attr('transform', 'translate(0,-60)');
     
     svg.append('text')
@@ -87,7 +87,7 @@ function youngVoters() {
 		.attr('xlink:href', 'resources/halfManGreen.jpg');
 	}
 
-	d3.select("#remain" + (33+i)).transition().delay(18000 + i*100).duration(1000)
+	d3.select("#remain" + (33+i)).transition().delay(18000 + base + i*100).duration(1000)
 	    .style('visibility', 'inherit');
 	
     }
@@ -118,7 +118,7 @@ function youngVoters() {
 	    .attr('height', 54)
 	    .attr("xlink:href","resources/fullManGrey.jpg");
 
-	d3.select("#leave" + (36+i)).transition().delay(18000 + i*100).duration(1000)
+	d3.select("#leave" + (36+i)).transition().delay(18000 + base + i*100).duration(1000)
 	    .style('visibility', 'inherit');
 
     }
@@ -231,8 +231,20 @@ function youngVoters() {
 	.style('font-size', '1rem')
 	.style('font-family', 'Gill Sans');
 
-    d3.select("#youngVotersNoVote").transition().delay(6000).duration(1000)
+    d3.select("#youngVotersNoVote").transition().delay(6000).duration(2000)
 	.style("visibility", "inherit");
+
+    d3.select("#explan1").transition().delay(8000).duration(1500)
+	.style("color", "rgb(0,112,184)");
+
+    d3.select("#explan1").transition().delay(12000).duration(1000)
+	.style("color", "white");
+
+    d3.select("#explan1").transition().delay(13000).duration(500)
+	.text("If we increase this amount to 80% and assume that those that did not vote would have voted in a similar fashion to those that did, here's what happens");
+
+    d3.select("#explan1").transition().delay(15000).duration(1500)
+	.style("color", "rgb(0,112,184)");
 
 //    d3.selectAll(".thirdRow").transition().delay(15000).duration(1000)
 //	.style("visibility", "hidden");
@@ -243,13 +255,13 @@ function youngVoters() {
 //    d3.select("#fourthRow3").transition().delay(15000).duration(1000)
 //	.style("visibility", "hidden");
 
-    d3.selectAll(".firstRow").transition().delay(18000).duration(1000)
+    d3.selectAll(".firstRow").transition().delay(18000 + base).duration(1000)
 	.style("visibility", "hidden");
 
-    d3.selectAll(".secondRow").transition().delay(18500).duration(1000)
+    d3.selectAll(".secondRow").transition().delay(18500 + base).duration(1000)
 	.style("visibility", "hidden");
 
-    d3.selectAll(".fourthRow").transition().delay(18000).duration(1000)
+    d3.selectAll(".fourthRow").transition().delay(18000 + base).duration(1000)
 	.style("visibility", "hidden");
 
 
