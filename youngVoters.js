@@ -12,6 +12,8 @@ function youngVoters() {
     var svg = d3.select("#sketch").attr("width", 1200).attr("height", 800).append('g');
     var votes = svg.append('g').attr('id', '#votes');
     var base = 4500;
+    var base1 = 800;
+    
     svg.attr('transform', 'translate(0,-60)');
     
     svg.append('text')
@@ -182,7 +184,6 @@ function youngVoters() {
 	.attr('height', 54)
 	.attr("xlink:href","resources/halfManGreen.jpg");
 
-
     for (var i=0; i<4; i++) {
 	if (i < 3) {
 	    youngVotersNoVote.append('svg:image')
@@ -216,7 +217,6 @@ function youngVoters() {
 
     youngVotersNoVote.attr('transform', 'translate(0,-30)');
 
-
     svg.append('text')
 	.attr('x',95)
 	.attr('y',660)
@@ -234,16 +234,16 @@ function youngVoters() {
     d3.select("#youngVotersNoVote").transition().delay(6000).duration(2000)
 	.style("visibility", "inherit");
 
-    d3.select("#explan1").transition().delay(8000).duration(1000)
+    d3.select("#explan1").transition().delay(8000 + base1).duration(1000)
 	.style("color", "rgb(0,112,184)");
 
-    d3.select("#explan1").transition().delay(13000).duration(500)
+    d3.select("#explan1").transition().delay(13000 + base1).duration(500)
 	.style("color", "white");
 
-    d3.select("#explan1").transition().delay(13500).duration(500)
+    d3.select("#explan1").transition().delay(13500 + base1).duration(500)
 	.text("If we increase this amount to 80% and assume that those that did not vote would have voted in a similar fashion to those that did, here's what happens");
 
-    d3.select("#explan1").transition().delay(15000).duration(1500)
+    d3.select("#explan1").transition().delay(15000 + base1).duration(1500)
 	.style("color", "rgb(0,112,184)");
     
 
@@ -256,22 +256,22 @@ function youngVoters() {
 //    d3.select("#fourthRow3").transition().delay(15000).duration(1000)
 //	.style("visibility", "hidden");
 
-    d3.selectAll(".firstRow").transition().delay(18000 + base).duration(1000)
+    d3.selectAll(".firstRow").transition().delay(18000 + base + base1).duration(1000)
 	.style("visibility", "hidden");
 
-    d3.selectAll(".secondRow").transition().delay(18500 + base).duration(1000)
+    d3.selectAll(".secondRow").transition().delay(18500 + base + base1).duration(1000)
 	.style("visibility", "hidden");
 
-    d3.selectAll(".fourthRow").transition().delay(18000 + base).duration(1000)
+    d3.selectAll(".fourthRow").transition().delay(18000 + base + base1).duration(1000)
 	.style("visibility", "hidden");
 
-    d3.select("#explan1").transition().delay(20000 + base).duration(1000)
+    d3.select("#explan1").transition().delay(20000 + base + base1).duration(1000)
 	.style("color", "white");
 
-    d3.select("#explan1").transition().delay(21000 + base).duration(500)
+    d3.select("#explan1").transition().delay(21000 + base + base1).duration(500)
 	.text("In fact, If only 70% of young voters had turned up Remain would have won!");
     
-    d3.select("#explan1").transition().delay(21500 + base).duration(1500)
+    d3.select("#explan1").transition().delay(21500 + base + base1).duration(1500)
 	.style("color", "rgb(0,112,184)");
     
 
