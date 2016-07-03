@@ -30,25 +30,33 @@ function youngVoters() {
     //static parts
 	
     //add remain votes
-    for (var i=0; i< 32; i++) {
-	votes.append('svg:image')
-	    .attr('id', 'remain' + i)
-	    .style('visibility', 'hidden')
-	    .attr('x', 90 + (i * 25))
-	    .attr('y', 60)
-	    .attr('width', 30)
-	    .attr('height', 50)
-	    .attr('xlink:href','resources/fullManGreen.jpg');
+    for (var i=0; i< 33; i++) {
+	if (i < 32) {
+	    votes.append('svg:image')
+		.attr('id', 'remain' + i)
+		.style('visibility', 'hidden')
+		.attr('x', 90 + (i * 25))
+		.attr('y', 60)
+		.attr('width', 30)
+		.attr('height', 50)
+		.attr('xlink:href','resources/fullManGreen.jpg');
+	}
+	else {
+	    votes.append('svg:image')
+		.attr('id', 'remain' + 32)
+		.style('visibility', 'hidden')
+		.attr('x', 85 + (32*25))
+		.attr('y', 60)
+		.attr('width', 32)
+		.attr('height', 54)
+		.attr('xlink:href', 'resources/halfManGreen.jpg');
+	}   
+
+	d3.select("#remain" + i).transition().delay(1000 + i*100).duration(1000)
+	    .style('visibility', 'inherit');
+
     }
 
-    votes.append('svg:image')
-	.attr('id', 'remain' + 32)
-    	.style('visibility', 'hidden')
-	.attr('x', 85 + (32*25))
-	.attr('y', 60)
-	.attr('width', 32)
-	.attr('height', 54)
-	.attr('xlink:href', 'resources/halfManGreen.jpg');
 
     //add leave votes
     for (var i=0; i< 36; i++) {
@@ -60,6 +68,10 @@ function youngVoters() {
 	    .attr('width', 32)
 	    .attr('height', 54)
 	    .attr("xlink:href","resources/fullManGrey.jpg");
+
+	d3.select("#leave" + i).transition().delay(1000 + i*100).duration(1000)
+	    .style('visibility', 'inherit');
+
     }
 
 
@@ -68,7 +80,7 @@ function youngVoters() {
     //four rows of 1m --> 5 men
 
     var youngVotersNoVote = svg.append('g')
-	.attr('id', '#youngVotersNoVote')
+	.attr('id', 'youngVotersNoVote')
 	.style('visibility', 'hidden')
 
     youngVotersNoVote.append('text')
@@ -153,6 +165,8 @@ function youngVoters() {
 	.style('font-size', '1rem')
 	.style('font-family', 'Gill Sans');
 
-    //end of static part of sketch 1
-    //start of transitions
+    d3.select("#youngVotersNoVote").transition().delay(8000).duration(1000)
+	.style("visibility", "inherit");
+    
+    
 }
