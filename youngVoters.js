@@ -77,7 +77,7 @@ function youngVoters() {
 	    .attr("xlink:href","resources/fullManGreen.jpg");
     }
 
-    for (var i=0; i<4; i++) {
+    for (var i=0; i<5; i++) {
 	youngVotersNoVote.append('svg:image')
 	    .attr('x', 90 + (i * 25))
 	    .attr('y', 480)
@@ -86,17 +86,27 @@ function youngVoters() {
 	    .attr("xlink:href","resources/fullManGreen.jpg");
     }
 
-    youngVotersNoVote.append('svg:image')
-	.attr('x', 85 + (4 * 25))
-	.attr('y', 480)
-	.attr('width', 32)
-	.attr('height', 54)
-	.attr("xlink:href","resources/halfManGreen.jpg");
-
     for (var i=0; i<4; i++) {
 	youngVotersNoVote.append('svg:image')
 	    .attr('x', 90 + (i * 25))
 	    .attr('y', 540)
+	    .attr('width', 32)
+	    .attr('height', 54)
+	    .attr("xlink:href","resources/fullManGreen.jpg");
+    }
+
+    youngVotersNoVote.append('svg:image')
+	.attr('x', 85 + (4 * 25))
+	.attr('y', 540)
+	.attr('width', 32)
+	.attr('height', 54)
+	.attr("xlink:href","resources/halfManGreen.jpg");
+
+
+    for (var i=0; i<4; i++) {
+	youngVotersNoVote.append('svg:image')
+	    .attr('x', 90 + (i * 25))
+	    .attr('y', 600)
 	    .attr('width', 32)
 	    .attr('height', 54)
 	    .attr("xlink:href","resources/fullManGrey.jpg");
@@ -104,7 +114,7 @@ function youngVoters() {
 
     youngVotersNoVote.append('svg:image')
 	.attr('x', 85 + (4 * 25))
-	.attr('y', 540)
+	.attr('y', 600)
 	.attr('width', 32)
 	.attr('height', 54)
 	.attr("xlink:href","resources/halfManGrey.jpg");
@@ -114,14 +124,14 @@ function youngVoters() {
 
     svg.append('text')
 	.attr('x',95)
-	.attr('y',600)
+	.attr('y',660)
 	.text('1 green sign for 200,000 remain votes')
 	.style('font-size', '1rem')
 	.style('font-family', 'Gill Sans');
 
     svg.append('text')
 	.attr('x',95)
-	.attr('y',620)
+	.attr('y',680)
 	.text('1 grey sign for 200,000 leave votes')
 	.style('font-size', '1rem')
 	.style('font-family', 'Gill Sans');
