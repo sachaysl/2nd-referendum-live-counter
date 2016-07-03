@@ -26,10 +26,14 @@ function youngVoters() {
 	.style('font-size', '1rem')
 	.style('font-family', 'Gill Sans');
 
+
+    //static parts
 	
     //add remain votes
     for (var i=0; i< 32; i++) {
 	votes.append('svg:image')
+	    .attr('id', 'remain' + i)
+	    .style('visibility', 'hidden')
 	    .attr('x', 90 + (i * 25))
 	    .attr('y', 60)
 	    .attr('width', 30)
@@ -38,6 +42,8 @@ function youngVoters() {
     }
 
     votes.append('svg:image')
+	.attr('id', 'remain' + 32)
+    	.style('visibility', 'hidden')
 	.attr('x', 85 + (32*25))
 	.attr('y', 60)
 	.attr('width', 32)
@@ -47,6 +53,8 @@ function youngVoters() {
     //add leave votes
     for (var i=0; i< 36; i++) {
 	votes.append('svg:image')
+	    .attr('id', 'leave' + i)
+	    .style('visibility', 'hidden')
 	    .attr('x', 90 + (i * 25))
 	    .attr('y', 120)
 	    .attr('width', 32)
@@ -54,19 +62,22 @@ function youngVoters() {
 	    .attr("xlink:href","resources/fullManGrey.jpg");
     }
 
-    svg.append('text')
+
+    //add youngVotersWhoDidntVote
+    //2.9m remain, 0.9m leave
+    //four rows of 1m --> 5 men
+
+    var youngVotersNoVote = svg.append('g')
+	.attr('id', '#youngVotersNoVote')
+	.style('visibility', 'hidden')
+
+    youngVotersNoVote.append('text')
 	.attr('x',90)
 	.attr('y',360)
 	.text("18-24 Year Olds Who Didn't Vote")
 	.style('font-size', '1.3rem')
 	.style('font-family', 'Gill Sans');
 
-
-    //add youngVotersWhoDidntVote
-    //2.9m remain, 0.9m leave
-    //four rows of 1m --> 5 men
-
-    var youngVotersNoVote = svg.append('g').attr('id', '#youngVotersNoVote')
 
     for (var i=0; i<5; i++) {
 	youngVotersNoVote.append('svg:image')
@@ -142,4 +153,6 @@ function youngVoters() {
 	.style('font-size', '1rem')
 	.style('font-family', 'Gill Sans');
 
+    //end of static part of sketch 1
+    //start of transitions
 }
