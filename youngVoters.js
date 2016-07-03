@@ -85,7 +85,7 @@ function youngVoters() {
 
     youngVotersNoVote.append('text')
 	.attr('x',90)
-	.attr('y',360)
+	.attr('y',380)
 	.text("18-24 Year Olds Who Didn't Vote")
 	.style('font-size', '1.3rem')
 	.style('font-family', 'Gill Sans');
@@ -114,6 +114,7 @@ function youngVoters() {
     for (var i=0; i<4; i++) {
 	youngVotersNoVote.append('svg:image')
 	    .attr('id', 'thirdRow'+ i)
+	    .attr('class', "thirdRow")
 	    .attr('x', 90 + (i * 25))
 	    .attr('y', 540)
 	    .attr('width', 32)
@@ -123,6 +124,7 @@ function youngVoters() {
 
     youngVotersNoVote.append('svg:image')
 	.attr('id', 'thirdRowHalf')
+	.attr("class", 'thirdRow')
 	.attr('x', 85 + (4 * 25))
 	.attr('y', 540)
 	.attr('width', 32)
@@ -167,6 +169,15 @@ function youngVoters() {
 
     d3.select("#youngVotersNoVote").transition().delay(8000).duration(1000)
 	.style("visibility", "inherit");
+
+    d3.selectAll(".thirdRow").transition().delay(15000).duration(1000)
+	.style("visibility", "hidden");
+
+    d3.select("#fourthRowHalf").transition().delay(15000).duration(1000)
+	.style("visibility", "hidden");
     
+    d3.select("#fourthRow3").transition().delay(15000).duration(1000)
+	.style("visibility", "hidden");
+
     
 }
