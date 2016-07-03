@@ -76,11 +76,5 @@ function youngVoters() {
 	.attr('height', 54)
 	.attr("xlink:href","resources/halfManGrey.jpg");
 
-
-    
-
-
-    
-    
-    
+    youngVotersNoVote.attr('transform', 'translate(0,-30)');
 }
