@@ -1,8 +1,10 @@
 function youngVoters() {
 
-    var svg = d3.select("#sketch").attr("width", 1200).attr("height", 800);
+    var svg = d3.select("#sketch").attr("width", 1200).attr("height", 800).append('g');
     var votes = svg.append('g').attr('id', '#votes');
 
+    svg.attr('transform', 'translate(60,0)');
+    
     svg.append('text')
 	.attr('x',100)
 	.attr('y',0)
