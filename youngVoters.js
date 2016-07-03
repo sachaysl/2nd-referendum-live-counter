@@ -241,7 +241,7 @@ function youngVoters() {
 	.style("color", "white");
 
     d3.select("#explan1").transition().delay(13500 + base1).duration(500)
-	.text("If we increase this amount to 80% and assume that those that did not vote would have voted in a similar fashion to those that did, here's what happens");
+	.text("If we increase this amount to 80% (assuming that those that did not vote would have voted in a similar fashion to those that did) here's what happens");
 
     d3.select("#explan1").transition().delay(15000 + base1).duration(1500)
 	.style("color", "rgb(0,112,184)");
