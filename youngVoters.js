@@ -7,8 +7,8 @@ function youngVoters() {
 	svg.append('svg:image')
 	    .attr('x', 90 + (i * 25))
 	    .attr('y', 60)
-	    .attr('width', 32)
-	    .attr('height', 54)
+	    .attr('width', 30)
+	    .attr('height', 50)
 	    .attr('xlink:href','resources/fullManGreen.jpg');
     }
 
@@ -76,5 +76,5 @@ function youngVoters() {
 	.attr('height', 54)
 	.attr("xlink:href","resources/halfManGrey.jpg");
 
-    youngVotersNoVote.attr('transform', 'translate(700,-30)');
+    youngVotersNoVote.attr('transform', 'translate(0,-30)');
 }
