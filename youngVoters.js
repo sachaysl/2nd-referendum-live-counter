@@ -1,3 +1,12 @@
+//text
+//According to Sky data, only 36% of 18-24 year olds bothered to vote
+
+//If we up this amount to 80% and assume that those that didn't vote would have
+//voted in a similar fashion to those that did, here's what happens:
+
+//In fact, we would have only needed x% of young voters to have turned up
+//to have changed the result
+
 function youngVoters() {
 
     var svg = d3.select("#sketch").attr("width", 1200).attr("height", 800).append('g');
