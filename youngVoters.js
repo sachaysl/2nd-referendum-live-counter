@@ -7,8 +7,8 @@ function youngVoters() {
     
     svg.append('text')
 	.attr('x',100)
-	.attr('y',0)
-	.text('The Case For a Second EU Referendum')
+	.attr('y',20)
+	.text('Brexit Referendum Results')
 	.style('font-size', '1.5rem')
 	.style('font-family', 'Gill Sans');
 
@@ -53,6 +53,14 @@ function youngVoters() {
 	    .attr('height', 54)
 	    .attr("xlink:href","resources/fullManGrey.jpg");
     }
+
+    svg.append('text')
+	.attr('x',100)
+	.attr('y',360)
+	.text("18-24 Year Olds Who Didn't Vote")
+	.style('font-size', '1.3rem')
+	.style('font-family', 'Gill Sans');
+
 
     //add youngVotersWhoDidntVote
     //2.9m remain, 0.9m leave
@@ -102,4 +110,20 @@ function youngVoters() {
 	.attr("xlink:href","resources/halfManGrey.jpg");
 
     youngVotersNoVote.attr('transform', 'translate(0,-30)');
+
+
+    svg.append('text')
+	.attr('x',95)
+	.attr('y',600)
+	.text('1 green sign for 200,000 remain votes')
+	.style('font-size', '1rem')
+	.style('font-family', 'Gill Sans');
+
+    svg.append('text')
+	.attr('x',95)
+	.attr('y',620)
+	.text('1 grey sign for 200,000 leave votes')
+	.style('font-size', '1rem')
+	.style('font-family', 'Gill Sans');
+
 }
