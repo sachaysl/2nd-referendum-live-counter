@@ -11,6 +11,21 @@ function youngVoters() {
 	.text('The Case For a Second EU Referendum')
 	.style('font-size', '1.5rem')
 	.style('font-family', 'Gill Sans');
+
+    svg.append('text')
+	.attr('x',40)
+	.attr('y',70)
+	.text('Remain')
+	.style('font-size', '1rem')
+	.style('font-family', 'Gill Sans');
+
+    svg.append('text')
+	.attr('x',45)
+	.attr('y',130)
+	.text('Leave')
+	.style('font-size', '1rem')
+	.style('font-family', 'Gill Sans');
+
 	
     //add remain votes
     for (var i=0; i< 32; i++) {
