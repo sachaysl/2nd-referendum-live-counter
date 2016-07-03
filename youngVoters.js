@@ -69,7 +69,7 @@ function youngVoters() {
 
 	else {
 	    votes.append('svg:image')
-		.attr('id', 'remain' + 32)
+		.attr('id', 'remain' + (33+i))
 		.style('visibility', 'hidden')
 		.attr('x', 85 + (41*25))
 		.attr('y', 57)
@@ -77,6 +77,9 @@ function youngVoters() {
 		.attr('height', 54)
 		.attr('xlink:href', 'resources/halfManGreen.jpg');
 	}
+
+	d3.select("#remain" + (33+i)).transition().delay(18000 + i*100).duration(1000)
+	    .style('visibility', 'inherit');
 	
     }
 
@@ -92,6 +95,21 @@ function youngVoters() {
 	    .attr("xlink:href","resources/fullManGrey.jpg");
 
 	d3.select("#leave" + i).transition().delay(1000 + i*100).duration(1000)
+	    .style('visibility', 'inherit');
+
+    }
+
+    for (var i=0; i< 3; i++) {
+	votes.append('svg:image')
+	    .attr('id', 'leave' + (36+i))
+	    .style('visibility', 'hidden')
+	    .attr('x', 90 + (36*25) + (i * 25))
+	    .attr('y', 120)
+	    .attr('width', 32)
+	    .attr('height', 54)
+	    .attr("xlink:href","resources/fullManGrey.jpg");
+
+	d3.select("#leave" + (36+i)).transition().delay(18000 + i*100).duration(1000)
 	    .style('visibility', 'inherit');
 
     }
@@ -116,6 +134,7 @@ function youngVoters() {
     for (var i=0; i<5; i++) {
 	youngVotersNoVote.append('svg:image')
 	    .attr('id', 'firstRow'+ i)
+	    .attr('class', "firstRow")
 	    .attr('x', 90 + (i * 25))
 	    .attr('y', 420)
 	    .attr('width', 32)
@@ -126,6 +145,7 @@ function youngVoters() {
     for (var i=0; i<5; i++) {
 	youngVotersNoVote.append('svg:image')
 	    .attr('id', 'secondRow'+ i)
+	    .attr('class', "secondRow")
 	    .attr('x', 90 + (i * 25))
 	    .attr('y', 480)
 	    .attr('width', 32)
@@ -155,13 +175,26 @@ function youngVoters() {
 
 
     for (var i=0; i<4; i++) {
-	youngVotersNoVote.append('svg:image')
-	    .attr('id', 'fourthRow' + i)
-	    .attr('x', 90 + (i * 25))
-	    .attr('y', 600)
-	    .attr('width', 32)
-	    .attr('height', 54)
-	    .attr("xlink:href","resources/fullManGrey.jpg");
+	if (i < 3) {
+	    youngVotersNoVote.append('svg:image')
+		.attr('id', 'fourthRow' + i)
+		.attr('class', 'fourthRow')
+		.attr('x', 90 + (i * 25))
+		.attr('y', 600)
+		.attr('width', 32)
+		.attr('height', 54)
+		.attr("xlink:href","resources/fullManGrey.jpg");
+	}
+
+	else {
+	    youngVotersNoVote.append('svg:image')
+		.attr('id', 'fourthRow' + i)
+		.attr('x', 90 + (i * 25))
+		.attr('y', 600)
+		.attr('width', 32)
+		.attr('height', 54)
+		.attr("xlink:href","resources/fullManGrey.jpg");
+	}
     }
 
     youngVotersNoVote.append('svg:image')
@@ -192,14 +225,24 @@ function youngVoters() {
     d3.select("#youngVotersNoVote").transition().delay(8000).duration(1000)
 	.style("visibility", "inherit");
 
-    d3.selectAll(".thirdRow").transition().delay(15000).duration(1000)
+//    d3.selectAll(".thirdRow").transition().delay(15000).duration(1000)
+//	.style("visibility", "hidden");
+
+//    d3.select("#fourthRowHalf").transition().delay(15000).duration(1000)
+//	.style("visibility", "hidden");
+    
+//    d3.select("#fourthRow3").transition().delay(15000).duration(1000)
+//	.style("visibility", "hidden");
+
+    d3.selectAll(".firstRow").transition().delay(18000).duration(1000)
 	.style("visibility", "hidden");
 
-    d3.select("#fourthRowHalf").transition().delay(15000).duration(1000)
+    d3.selectAll(".secondRow").transition().delay(18500).duration(1000)
 	.style("visibility", "hidden");
-    
-    d3.select("#fourthRow3").transition().delay(15000).duration(1000)
+
+    d3.selectAll(".fourthRow").transition().delay(18000).duration(1000)
 	.style("visibility", "hidden");
+
 
     
 }
