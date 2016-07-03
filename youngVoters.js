@@ -15,6 +15,7 @@ var counter = 0;
 
 function applyOrientation() {
     if (window.innerHeight > window.innerWidth) {
+	d3.select("#container").style("visibility", "hidden");
 	alert("If you are using a phone or tablet to view this visualization, please close this box and rotate to landscape to view it. Otherwise please enlarge your browser window, click ok, and refresh");
     } else {
 	if (window.innerWidth < 850 ) {
