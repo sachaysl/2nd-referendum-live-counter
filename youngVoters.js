@@ -70,6 +70,7 @@ function youngVoters() {
 
     for (var i=0; i<5; i++) {
 	youngVotersNoVote.append('svg:image')
+	    .attr('id', 'firstRow'+ i)
 	    .attr('x', 90 + (i * 25))
 	    .attr('y', 420)
 	    .attr('width', 32)
@@ -79,6 +80,7 @@ function youngVoters() {
 
     for (var i=0; i<5; i++) {
 	youngVotersNoVote.append('svg:image')
+	    .attr('id', 'secondRow'+ i)
 	    .attr('x', 90 + (i * 25))
 	    .attr('y', 480)
 	    .attr('width', 32)
@@ -88,6 +90,7 @@ function youngVoters() {
 
     for (var i=0; i<4; i++) {
 	youngVotersNoVote.append('svg:image')
+	    .attr('id', 'thirdRow'+ i)
 	    .attr('x', 90 + (i * 25))
 	    .attr('y', 540)
 	    .attr('width', 32)
@@ -96,6 +99,7 @@ function youngVoters() {
     }
 
     youngVotersNoVote.append('svg:image')
+	.attr('id', 'thirdRowHalf')
 	.attr('x', 85 + (4 * 25))
 	.attr('y', 540)
 	.attr('width', 32)
@@ -105,6 +109,7 @@ function youngVoters() {
 
     for (var i=0; i<4; i++) {
 	youngVotersNoVote.append('svg:image')
+	    .attr('id', 'fourthRow' + i)
 	    .attr('x', 90 + (i * 25))
 	    .attr('y', 600)
 	    .attr('width', 32)
@@ -113,6 +118,7 @@ function youngVoters() {
     }
 
     youngVotersNoVote.append('svg:image')
+	.attr('id', 'fourthRowHalf')
 	.attr('x', 85 + (4 * 25))
 	.attr('y', 600)
 	.attr('width', 32)
