@@ -170,7 +170,7 @@ function youngVoters() {
     youngVotersNoVote.append('text')
 	.attr('x',90)
 	.attr('y',380)
-	.text("18-24 Year Olds Who Didn't Vote")
+	.text("18-24 Year-Olds Who Didn't Vote")
 	.style('font-size', '1.3rem')
 	.style('font-family', 'Gill Sans');
 
