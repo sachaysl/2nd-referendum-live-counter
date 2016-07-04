@@ -44,7 +44,7 @@ function youngVoters() {
     var base = 4500;
     var base1 = 800;
     
-    svg.attr('transform', 'translate(0,-60)');
+    svg.attr('transform', 'translate(0,-120)');
     
     svg.append('text')
 	.attr('x',90)
