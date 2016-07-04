@@ -11,16 +11,30 @@ window.onresize = function (event) {
     applyOrientation();
 }
 
+var counter = 0;
+
 function applyOrientation() {
     if (window.innerHeight > window.innerWidth) {
-	alert("Please rotate your phone to view this visualization");
+	alert("If you are using a phone or tablet to view this visualization, please close this box and rotate to landscape to view it. Otherwise please enlarge your browser window, click ok, and refresh");
     } else {
-	youngVoters();
+	if (window.innerWidth < 850 ) {
+	    window.parent.document.body.style.zoom = 0.8;
+	}
+
+	if (window.innerWidth > 850 ) {
+	    window.parent.document.body.style.zoom = 1.0;
+	}
+
+	if (counter == 0) {
+	    youngVoters();
+	    counter++;
+	}
     }
 }
 
 function youngVoters() {
 
+    
     var svg = d3.select("#sketch").attr("width", 1200).attr("height", 800).append('g');
     var votes = svg.append('g').attr('id', '#votes');
     var base = 4500;
