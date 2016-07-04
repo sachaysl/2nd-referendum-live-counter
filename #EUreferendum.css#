@@ -76,10 +76,6 @@ a {
     font-size: 0.8rem;
     }
 
-    #errorMessage {
-	visibility: inherit;
-    }
-
 
 }
 

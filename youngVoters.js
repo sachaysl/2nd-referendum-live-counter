@@ -52,7 +52,8 @@ function youngVoters() {
     svg.append('text')
 	.attr('x',90)
 	.attr('y',20)
-	.text('Brexit Referendum Results')
+	.text('Brexit Referendum Results - How The Young Let Us Down')
+	.style('font-weight', 200)
 	.style('font-size', '1.5rem')
 	.style('font-family', 'Gill Sans');
 
@@ -170,7 +171,8 @@ function youngVoters() {
     youngVotersNoVote.append('text')
 	.attr('x',90)
 	.attr('y',380)
-	.text("18-24 Year Olds Who Didn't Vote")
+	.text("18-24 Year-Olds Who Didn't Vote")
+	.style("font-weight", 200)
 	.style('font-size', '1.3rem')
 	.style('font-family', 'Gill Sans');
 
@@ -302,7 +304,7 @@ function youngVoters() {
 	.style("color", "white");
 
     d3.select("#explan1").transition().delay(21000 + base + base1).duration(500)
-	.text("In fact, If only 70% of young voters had turned up Remain would have won!");
+	.text("In fact, under our assumptions, if only 72% of young voters had turned up Remain would have won!");
     
     d3.select("#explan1").transition().delay(21500 + base + base1).duration(1500)
 	.style("color", "rgb(0,112,184)");
