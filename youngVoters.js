@@ -250,18 +250,18 @@ function youngVoters() {
 	.attr('height', 54)
 	.attr("xlink:href","resources/halfManGrey.jpg");
 
-    youngVotersNoVote.attr('transform', 'translate(0,-30)');
+    youngVotersNoVote.attr('transform', 'translate(0,-60)');
 
     svg.append('text')
 	.attr('x',95)
-	.attr('y',660)
+	.attr('y',630)
 	.text('1 green sign for 200,000 remain votes')
 	.style('font-size', '1rem')
 	.style('font-family', 'Gill Sans');
 
     svg.append('text')
 	.attr('x',95)
-	.attr('y',680)
+	.attr('y',650)
 	.text('1 grey sign for 200,000 leave votes')
 	.style('font-size', '1rem')
 	.style('font-family', 'Gill Sans');
