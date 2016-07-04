@@ -21,6 +21,10 @@ function applyOrientation() {
 	    window.parent.document.body.style.zoom = 0.8;
 	}
 
+	if (window.innerWidth < 500) {
+	    window.parent.document.body.style.zoom = 0.5;
+	}
+
 	if (window.innerWidth > 850 ) {
 	    window.parent.document.body.style.zoom = 1.0;
 	}
