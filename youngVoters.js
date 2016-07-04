@@ -22,7 +22,7 @@ function applyOrientation() {
 	}
 
 	if (window.innerWidth < 650) {
-	    window.parent.document.body.style.zoom = 0.8;
+	    window.parent.document.body.style.zoom = 0.6;
 	}
 
 	if (window.innerWidth > 850 ) {
