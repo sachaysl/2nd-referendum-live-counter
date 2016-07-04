@@ -21,7 +21,7 @@ function applyOrientation() {
 //	alert("If you are using a phone or tablet to view this visualization, please close this box and rotate to landscape to view it. Otherwise please enlarge your browser window, click ok, and refresh");
 //    } else {
 	if (window.innerWidth < 850 ) {
-	    window.parent.document.body.style.zoom = 0.8;
+	    window.parent.document.body.style.zoom = 0.7;
 	}
 
 	if (window.innerWidth < 650) {
