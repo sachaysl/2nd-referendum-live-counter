@@ -10,7 +10,7 @@
   </head>
   <body>
     <div id="errorMessage">
-      If you are using a phone or tablet to view this, please rotate it to landscape and refresh. Otherwise, please enlarge your browser window and refresh. Thankyou :)
+      If you are using a phone or tablet to view this, please rotate it to landscape. Otherwise, please enlarge your browser window and refresh. Thankyou :)
     </div>
     <div id="container">
       <div id="explan1">
@@ -21,6 +21,9 @@
       </svg>
     </div>
     <script>
+
+      window.onorientationchange = function() { window.location.reload(); };
+
       document.addEventListener("DOMContentLoaded", function(event) {
       applyOrientation();
       });
