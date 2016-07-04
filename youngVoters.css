@@ -18,5 +18,13 @@
     }
 }
 
+@media only screen and (orientation: portrait) and (max-width: 500px) {
+    #container {
+	visibility: hidden;
+    }
+    
+
+}
+
 
 
